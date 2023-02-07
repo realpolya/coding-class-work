@@ -2,6 +2,16 @@ h3 {
     color: rgb(66, 3, 3);
 }
 
+h1 {
+    color: rgb(203, 71, 71);
+    font-weight: 700;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 400px;
+    height: auto
 }
