@@ -1,21 +1,40 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h3 {
     position: relative;
     top: 0px;
-    left: 500px;
     color: rgb(121, 9, 9);
 }
 
 h1 {
     position: relative;
     top: 50px;
-    bottom: 100px;
-    left: 400px;
+    bottom: 0px;
     color: rgb(203, 71, 71);
     font-weight: 700;
 }
 
-body {
+html, body {
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+body {
+    background: papayawhip;
+    min-height: 100vh;
+}
+
+main, header, footer {
+    padding: 20px;
+    color: magenta;
+}
+
+header, footer {
+    line-height: 60px;
 }
 
 q {
@@ -26,9 +45,9 @@ strong {
     color:rgb(4, 134, 0); 
 }
 
-p {
+/*p {
     width: 700px;
-}
+}*/
 
 div {
     width: 1000px;
@@ -45,12 +64,12 @@ div {
 img {
     position: relative;
     top: 50px;
-    left: 500px;
-    width: 200px;
+    left: 250px;
+    width: 700px;
     height: auto
 }
 
-.container {
+.flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,4 +79,13 @@ img {
 .item {
     background-color: rgb(205, 205, 240);
     width: 700px;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        background: magenta;
+    }
+    body {
+        background: green;
+    }
 }

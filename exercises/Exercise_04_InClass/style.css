@@ -61,3 +61,11 @@ div {
     background-color: rgb(205, 205, 240);
     width: 700px;
 }
+
+header {
+    background-color:blueviolet
+}
+
+footer {
+    background-color:rgb(235, 165, 200)
+}
