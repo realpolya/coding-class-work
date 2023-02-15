@@ -1,0 +1,63 @@
+h3 {
+    position: relative;
+    top: 0px;
+    left: 500px;
+    color: rgb(121, 9, 9);
+}
+
+h1 {
+    position: relative;
+    top: 50px;
+    bottom: 100px;
+    left: 400px;
+    color: rgb(203, 71, 71);
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+q {
+    color:brown;
+}
+
+strong {
+    color:rgb(4, 134, 0); 
+}
+
+p {
+    width: 700px;
+}
+
+div {
+    width: 1000px;
+}
+
+.box {
+    position: relative;
+    top: 50px;
+    left: 150px;
+    width: 900px;
+    background-color:rgb(205, 231, 204)
+}
+
+/*img {
+    position: relative;
+    top: 50px;
+    left: 500px;
+    width: 200px;
+    height: auto
+}*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.item {
+    background-color: rgb(205, 205, 240);
+    width: 700px;
+}
