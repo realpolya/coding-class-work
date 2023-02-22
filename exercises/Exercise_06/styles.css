@@ -1,0 +1,41 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    width: 50%;
+  }
+  
+  .column {
+    width: 50%;
+    height: 300px;
+    animation: 3s Wonderful;
+  }
+  
+  .left {
+    background: magenta;
+  }
+  
+  .right {
+    background: teal;
+  }
+
+  @keyframes Wonderful {
+      0% {
+          background-color: tomato;
+      }
+      50% {
+          background-color: pink;
+      }
+      100% {
+          background-color: blanchedalmond;
+      }
+  }
