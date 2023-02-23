@@ -1,0 +1,55 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .column {
+    width: 1000px;
+    height: 50px;
+    font-family: 'Roboto Serif', serif;
+    font-size: xx-large;
+    animation: 3s Wonderful;
+  }
+  
+  .left {
+    background: rgb(225, 240, 225);
+  }
+  
+  .right {
+    background: blanchedalmond;
+    direction: rtl;
+  }
+
+  img {
+      width: 500px;
+  }
+
+  .below {
+      width: 600px;
+      background:rgb(225, 240, 225);
+        border: 10px;
+      border-color: black;
+  }
+
+  @keyframes Wonderful {
+    0% {
+        background-color: rgb(0, 0, 0);
+    }
+    50% {
+        background-color: rgb(255, 255, 255);
+    }
+    100% {
+        background-color: blanchedalmond;
+    }
+}
