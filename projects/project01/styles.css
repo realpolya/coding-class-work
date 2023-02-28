@@ -97,6 +97,7 @@ html, body {
     position: absolute;
     top: 500px;
     left: 400px;
+    width: 700px;
     font-size: 30px;
     color: white;
   }
@@ -133,6 +134,10 @@ html, body {
 
   .normal-text:hover {
     color:rgb(85, 136, 72);
+  }
+
+  em {
+    color:rgb(176, 176, 176);
   }
 
   /*.market:hover{
