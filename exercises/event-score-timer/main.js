@@ -63,4 +63,7 @@ function generatePoem(n){
 }
 
 //call the function
-generatePoem(25)
+window.addEventListener('load', function(){
+    generatePoem(25)
+})
+
