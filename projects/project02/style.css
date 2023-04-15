@@ -167,3 +167,7 @@ html, body {
     background-color: rgb(192, 192, 192);
   }
 }
+
+.filter-btn {
+  color: rgb(7, 118, 118);
+}

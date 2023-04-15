@@ -4,17 +4,26 @@ const deserts = [
     {
         name: "Desert1",
         location: "DeathValley",
+        size: 1000,
         image: 'https://drive.google.com/uc?id=1iS6BFUnReISgARHlENTEYPeHw86XorJs'
     },
     {
         name: "Desert2",
         location: "Atacama",
+        size: 500,
         image: 'https://drive.google.com/uc?id=1dLzd5MBeB-jpc52FHYPnnuQi9CWc031M'
     },
     {
         name: "Desert3",
         location: "DeathValley",
+        size: 1000,
         image: 'https://drive.google.com/uc?id=1QljuAXmDr_cigiuFlf4JemHLRrBHqOUM'
+    },
+    {
+        name: "Desert4",
+        location: "Gobi",
+        size: 700,
+        image: 'https://drive.google.com/uc?id=18vYsRxljS3YkGABIIOJY5EqOeLdzLcvP'
     },
 
 ]
@@ -49,3 +58,32 @@ function renderDesertToPage(results) {
 }
 
 renderDesertToPage(deserts);
+
+// Sorting Method
+let filterBtns = document.querySelector(".filters");
+let cards = document.querySelectorAll(".card");
+
+function sortingFn(event) {
+    if (event.target.classList.contains('filter-btn')) {
+        const filterValue = event.target.getAttribute('data-filter');
+
+        if(filterValue === 'from smaller to larger'){
+            deserts.sort(function(a, b){
+                if(a.size < b.size){
+                    return -1
+                }
+                if(a.size > b.size){
+                    return 1
+                }
+                return 0
+            })
+            ul.innerHTML = ""
+            renderDesertToPage(deserts)
+        } else if (filterValue === 'from larger to smaller'){
+
+            ul.innerHTML = ""
+            renderDesertToPage(deserts)
+        }
+    }
+}
+filterBtns.addEventListener("click", sortingFn);
