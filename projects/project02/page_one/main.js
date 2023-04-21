@@ -122,7 +122,72 @@ const deserts = [
         size: 3552000,
         image: 'https://drive.google.com/uc?id=1FkpuVk_GL-A4n-zOnml4t4Lq5fPRyHcF'
     },
-
+    {
+        name: "Desert21",
+        location: "CharaSands",
+        size: 7,
+        image: 'https://drive.google.com/uc?id=1aC3Pvbsrr2l5ogui4XkCkVmwy_tCEmM4'
+    },
+    {
+        name: "Desert22",
+        location: "CharaSands",
+        size: 7,
+        image: 'https://drive.google.com/uc?id=1lNkGAEbejrouPDuYXwSY5mL5JiTPOzru'
+    },
+    {
+        name: "Desert23",
+        location: "CharaSands",
+        size: 7,
+        image: 'https://drive.google.com/uc?id=1ur-y9ZIn5KtM9-RMSmqJGWDN7mgYu6Ax'
+    },
+    {
+        name: "Desert24",
+        location: "GreatKobukSandDunes",
+        size: 25,
+        image: 'https://drive.google.com/uc?id=11mr3LzE-6l6d84zPBzAJWlxtI_-re9cx'
+    },
+    {
+        name: "Desert25",
+        location: "GreatKobukSandDunes",
+        size: 25,
+        image: 'https://drive.google.com/uc?id=1Y8QfBYehw4Na53Y-0kYVD0djQkL51GZB'
+    },
+    {
+        name: "Desert26",
+        location: "Agafay",
+        size: 0.5,
+        image: 'https://drive.google.com/uc?id=11nxbWoNsInADq51bW-mrMOai8xI2r_Mu'
+    },
+    {
+        name: "Desert27",
+        location: "Agafay",
+        size: 0.5,
+        image: 'https://drive.google.com/uc?id=19MDMR_BzZ17lgCMk0u5GpIPSh3V6arYn'
+    },
+    {
+        name: "Desert28",
+        location: "Atacama",
+        size: 40441,
+        image: 'https://drive.google.com/uc?id=1r3On0Ef9yO3fbEiYpCisPAwxK5_aJRJ2'
+    },
+    {
+        name: "Desert29",
+        location: "Atacama",
+        size: 40441,
+        image: 'https://drive.google.com/uc?id=1L3KpzDMCl_yvhSCCbJSZ8py-ZKQe63BE'
+    },
+    {
+        name: "Desert30",
+        location: "Atacama",
+        size: 40441,
+        image: 'https://drive.google.com/uc?id=1bhpqvbrbbVd9q1S1Z61TVLHyZuBw_Pl7'
+    },
+    {
+        name: "Desert31",
+        location: "Atacama",
+        size: 40441,
+        image: 'https://drive.google.com/uc?id=1u_0zGPhkSs85Bo7Zn9jNoKtZOb7eFOjx'
+    },
 ]
 
 // Rendering Images from above to page
