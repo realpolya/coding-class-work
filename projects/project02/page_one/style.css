@@ -55,6 +55,15 @@ html, body {
     justify-content: space-around;
   }
 
+  ul .card.hide {
+    display: none;
+  }
+  
+  ul .card.show {
+    /* display: block; */
+    animation: fadeIn 0.5s ease;
+  }
+  
   li {
     list-style-type: none;
     border:  5px solid rgb(228, 226, 201);
