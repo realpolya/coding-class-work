@@ -188,6 +188,61 @@ const deserts = [
         size: 40441,
         image: 'https://drive.google.com/uc?id=1u_0zGPhkSs85Bo7Zn9jNoKtZOb7eFOjx'
     },
+    {
+        name: "Desert32",
+        location: "MonumentValley",
+        size: 28.7,
+        image: 'https://drive.google.com/uc?id=17EnXlSP3f2JYRTic7uZTjx6xHj0DGjy1'
+    },
+    {
+        name: "Desert33",
+        location: "MojaveDesert",
+        size: 47877,
+        image: 'https://drive.google.com/uc?id=1PwOPVCWp26aw0RMKLnHDluNSYO5sb36s'
+    },
+    {
+        name: "Desert34",
+        location: "MojaveDesert",
+        size: 47877,
+        image: 'https://drive.google.com/uc?id=1hfI8Xbg3INb4cOjObz00QYLJjaSpKTB3'
+    },
+    {
+        name: "Desert35",
+        location: "MojaveDesert",
+        size: 47877,
+        image: 'https://drive.google.com/uc?id=1pAwfhgqVknrE-bkwYhX0KDt3KGz5QeEq'
+    },
+    {
+        name: "Desert36",
+        location: "MojaveDesert",
+        size: 47877,
+        image: 'https://drive.google.com/uc?id=1nb5QZBpesQZjH-4D9colAjpuZziUrfP_'
+    },
+    {
+        name: "Desert37",
+        location: "MojaveDesert",
+        size: 47877,
+        image: 'https://drive.google.com/uc?id=1v5RIErNvdprtJTlTcNX1vwxsf1Z2EPJi'
+    },
+    {
+        name: "Desert38",
+        location: "TharDesert",
+        size: 96238,
+        image: 'https://drive.google.com/uc?id=1urjr1GmJ1WfWubaXtHXSmbWxkwk0hRID'
+    },
+    {
+        name: "Desert39",
+        location: "TharDesert",
+        size: 96238,
+        image: 'https://drive.google.com/uc?id=1Zx8VN9cCLTE7O3gmygbEBWNNMMjypAuF'
+    },
+    {
+        name: "Desert40",
+        location: "TharDesert",
+        size: 96238,
+        image: 'https://drive.google.com/uc?id=1lRa45UHGmayhMr4TuXD7HlPPHRXsJBKL'
+    },
+
 ]
 
 // Rendering Images from above to page
