@@ -1,3 +1,4 @@
+<!-- This page is the search page  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +21,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <div class="flex-container">
-        <div class="frontimage">
-            <div class="gradient-overlay">
-                <img class="hugeimage" src="https://drive.google.com/uc?id=1cYDvhAK4iiplgTRG2LI3HM-Lo7M3N_6J">
-            </div>
-            <div class="column left">
-                <a class="top-text" href="https://realpolya.github.io/coding-class-work/index.html">Desert Collection</a>
-            </div>
-            <div class="column right">
-                <a class="top-text" href="https://www.bottegaveneta.com/en-us?tp=62206&ad=RSA&gclid=Cj0KCQiA6fafBhC1ARIsAIJjL8mlEJhVkoBm5MhGG-gRAWxpHCAYwxwpQeUUl9ZOy3hwfnDBjmwMmbMaAr3jEALw_wcB&gclsrc=aw.ds">Escape</a>
-            </div>
-            <p class="major-text">DESERTS</p>
-            <p class="major-text-continue">Death Valley, Atacama, Namib, Gobi & others</p>
-        </div>
-    </div>
     <div class="container">
+        <div class="navigation">
+          <a href="../page_two/index.html">Desert Home Page</a>
+          <a href="../page_three/index.html">Desert About Page</a>
+        </div>
+        <br>
+        <div class="filters">
+            <h2>SEARCH BAR</h2>
+          <br>
+          <div class="form-container">
+            <form class="form">
+              <input id="search" type="text" class="input" placeholder="search..."/>
+              <button id="clear" class="clear-results">clear</button>
+            </form>
+          </div>
+        </div>
+        <br>
         <!-- Filters  -->
         <div class="filters">
             <h2>SORTING</h2>
@@ -70,6 +72,9 @@
           <button class="filter-btn-desert active-desert" data-filter="all">All</button>
         </div>
         <!-- Results  -->
+        <div class="results-container">
+          <ul class="results-list" id="list"></ul>
+        </div>
         <div class="list">
           <h2>Deserts</h2>
           <ul></ul>

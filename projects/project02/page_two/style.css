@@ -13,8 +13,8 @@ html, body {
 
 .flex-container {
     display: flex;
-    width: 600px;
-    padding:1%;
+    width: 100%;
+    padding:0%;
     background:rgba(234, 236, 234, 0.709);
     border-color: black;
     animation: 3s Wonderful;
@@ -54,4 +54,103 @@ ul {
 .curved-div {
     background: white;
     color: rgb(117, 90, 90);
+}
+
+.left {
+  background: rgba(225, 240, 225, 0.236);
+}
+
+.right {
+  background: rgba(255, 235, 205, 0.236);
+  direction: rtl;
+}
+
+.hugeimage {
+  padding: 0;
+  margin: 0 auto;
+  width: 2500px;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  opacity: 100%;
+}
+
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, black, white);
+  opacity: 70%;
+}
+
+.column {
+  width: 750px;
+  height: 50px;
+  font-family: 'Roboto Serif', serif;
+  font-size: xx-large;
+  animation: 3s Wonderful;
+}
+
+.left {
+  position: fixed;
+  top:10px;
+  left:0px;
+}
+
+.right {
+  position: fixed;
+  top: 10px;
+  left: 750px;
+  direction: rtl;
+}
+
+.top-text {
+  color: white;
+  text-decoration: none;
+  transition: color 0.1s ease-in 0.1s;
+}
+
+.top-text:hover {
+  color:rgb(80, 101, 75);
+}
+
+.major-text {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+  font-size: 100px;
+  color: white;
+}
+
+.major-text-continue {
+  position: absolute;
+  top: 500px;
+  left: 400px;
+  width: 700px;
+  font-size: 30px;
+  color: white;
+}
+
+.below {  
+    width: 600px;
+    padding:1%;
+    background:rgba(234, 236, 234, 0.709);
+    border-color: black;
+    animation: 3s Wonderful;
+}
+
+.market {
+  opacity: 50%;
+  transition: opacity 0.1s ease-in 0.1s;
+}
+
+.market:hover {
+  opacity: 100%;
 }

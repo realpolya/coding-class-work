@@ -665,14 +665,9 @@ function renderDesertToPage(results) {
 
 renderDesertToPage(deserts);
 
-//flipping the images to reveal their location
-//var flipping = document.querySelector('.flipping');
-//	flipping.addEventListener( 'click', function() {
-// 		flipping.classList.toggle('is-flipped');
-//	});
-
 
 // Sorting Method
+
 let filterBtns = document.querySelector(".filters");
 let cards = document.querySelectorAll(".card");
 
@@ -710,9 +705,6 @@ function sortingFn(event) {
 filterBtns.addEventListener("click", sortingFn);
 
 //FILTERING BY LOCATION OF THE DESERT
-
-
-//Celeste's script exactly
   
 let filterBtns1 = document.querySelector(".filtersdesert");
 let cards1 = document.querySelectorAll(".card");
@@ -744,41 +736,51 @@ let cards1 = document.querySelectorAll(".card");
   filterBtns1.addEventListener("click", filterFn);
 
 
-  //let filterBtns = document.querySelector(".filters");
-//let cards = document.querySelectorAll(".card");
 
-//let filterBtns1 = document.querySelector(".filters-desert");
 
-//function filterFn(event) {
-//  console.log(event.target)
- //   if(event.target.classList.contains('filter-btn-desert')){
- //       //select the current active button
- //       let activeBtn = filterBtns1.querySelector('.active-desert')
- //       activeBtn.classList.remove('active-desert')
-//
-        //apply the active class to the target
- //       event.target.classList.add('active-desert')
+//WORKING WITH THE SEARCH BAR
 
- //       const filterValue1 = event.target.getAttribute('data-filter') // name of the location
 
- //       for(let i = 0; i < cards.length; i++){
- //           if(cards[i].classList.contains(filterValue1) || filterValue1 === 'all'){
-//                cards[i].classList.remove('hide')
- //               cards[i].classList.add('show')
- //           } else {
- //               cards[i].classList.remove('show')
- //               cards[i].classList.add('hide')
- //           }
- //           
- //       }
- //   }
-//}
+const searchInput = document.querySelector('.input')
 
-//filterBtns1.addEventListener("click", filterFn)
+searchInput.addEventListener("input", (e) => {
+    //1.declare and assign the value of the event's target to a variable
+    let value = e.target.value
 
-//what is wrong with the script?
+    //2. check if input exists and if input is larger than 0
+    if (value && value.trim().length > 0){
+        //3. redefine 'value' to exclude white space and change input to all lowercase
+        value = value.trim().toLowerCase()
+        //4. return the results only if the value of the search is included in the person's name
+        // we need to write code (a function for filtering through our data to include the search input value)
 
-//const saharaDesertImages =
-//    deserts.filter(function(deserts) {
- //   return deserts.location == "Sahara";
-//});
+        //returning only the results of setList if the value of the search is included
+        setList(deserts.filter(desert => {
+            return desert.location.includes(value)
+        }))
+    } else {
+        //5. return nothing
+    }
+})
+
+// creating foundation for the clear button
+const clearButton = document.getElementById('clear')
+
+clearButton.addEventListener("click", () => {
+    //1. write a function that removes any previous results from the page
+})
+
+//showing results on the page
+function setList(results){
+
+    for (const deserts of results){
+        //adding a class to each item of the results
+        listItem.classList.add('result-item')
+
+        const text = document.createTextNode(deserts.location)
+
+        listItem.appendChild(text)
+
+        list.appendChild(listItem)
+    }
+}
