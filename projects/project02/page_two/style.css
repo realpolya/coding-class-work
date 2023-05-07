@@ -19,6 +19,24 @@ html, body {
     border-color: black;
     animation: 3s Wonderful;
   }
+  
+  /*container holding upper menu*/
+  .navigation{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(249, 231, 198);
+  }
+  
+  /*container holding each link separately*/
+  .nav-button{
+    width: 50%;
+    height: 100px;
+    animation: 3s Wonderful;
+    text-align: center;
+    color:rgb(168, 153, 130);
+    padding:10px;
+  }
 
 ul {
     display: flex;
@@ -75,7 +93,7 @@ ul {
 
 /* container holding the background image*/
 .hugeimage {
-  height: 450px;
+  height: 250px;
   width: 2500px;
   display: block;
   padding: 0;
@@ -97,8 +115,8 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, black, white);
-  opacity: 70%;
+  background-image: linear-gradient(to bottom, rgb(249, 231, 198), white);
+  opacity: 40%;
 }
 
 .column {
@@ -136,17 +154,16 @@ ul {
 .major-text {
   position: relative;
   text-align: match-parent;
-  font-size: 100px;
-  color: white;
+  font-size: 60px;
+  color: rgb(168, 153, 130);
 }
 
 /* container holding text below main text*/
 .major-text-continue {
   position: relative;
   text-align: match-parent;
-  width: 700px;
-  font-size: 30px;
-  color: white;
+  font-size: 20px;
+  color: rgb(168, 153, 130);
 }
 
 .below {  
