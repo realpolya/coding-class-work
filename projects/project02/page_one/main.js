@@ -652,6 +652,11 @@ function renderDesertToPage(results) {
         location.classList.add(results[i].location)
         location.textContent = results[i].location
 
+        //add desert size
+        //let area = document.createElement('p')
+        //area.classList.add(results[i].size)
+        //area.textContext = results[i].size
+
         //add desert image
         let image = document.createElement('img')
         image.setAttribute('src', results[i].image)

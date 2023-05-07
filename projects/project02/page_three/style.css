@@ -6,7 +6,7 @@
 
 html, body {
     font-family: 'Montserrat', sans-serif;
-    color:aliceblue;
+    color:rgb(42, 48, 54);
     height: 100%;
     background-image: url(https://drive.google.com/uc?id=1HJ441AqgCIowGtZRg8n0k5wjTDCVBS5H);
     animation: 3s BackyColor;
@@ -29,3 +29,30 @@ html, body {
     color:rgb(168, 153, 130);
     padding:10px;
   }
+
+/* container that has desert stories text*/
+.flex-container{
+    display: flex;
+    width: 100%;
+  }
+
+/* container that has right and left columns*/
+.column{
+  padding: 10px;
+  width:50%;
+}
+
+h2 {
+  padding: 10px;
+  color:rgb(184, 102, 102);
+}
+
+p {
+  padding-left: 10px;
+}
+
+img {
+  padding:10px;
+  width: 200px;
+  height: auto;
+}
