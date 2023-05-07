@@ -81,11 +81,24 @@ img {
     width: 700px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .flex-container {
         background: magenta;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
     body {
         background: green;
+    }
+    img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }

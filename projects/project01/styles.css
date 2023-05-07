@@ -32,9 +32,7 @@ html, body {
   .hugeimage {
     padding: 0;
     margin: 0 auto;
-    width: 2500px;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
     position: relative;
     opacity: 100%;
   }
@@ -165,5 +163,18 @@ html, body {
   }
   100% {
     background-color: rgb(192, 192, 192);
+  }
+}
+
+@media (max-width: 160px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .frontimage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 }

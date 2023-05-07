@@ -11,13 +11,14 @@ html, body {
 
 .flex-container {
     display: flex;
-    width: 50%;
+    width: 100%;
   }
   
   .column {
     width: 50%;
-    height: 300px;
+    height: 100px;
     animation: 3s Wonderful;
+    text-align: center;
   }
   
   .left {
@@ -26,6 +27,14 @@ html, body {
   
   .right {
     background: teal;
+  }
+
+  .left-center {
+    background: rgb(214, 145, 214);
+  }
+
+  .right-center {
+    background: rgb(146, 220, 220);
   }
 
   @keyframes Wonderful {
