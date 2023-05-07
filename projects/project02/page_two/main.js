@@ -646,15 +646,17 @@ function renderDesertToPage(results) {
         listItem.classList.add('card', results[i].location) // 
         //add desert name
         let title = document.createElement('h3')
-        title.textContent = results[i].name //
+        //title.textContent = results[i].name //
         //add desert location
         let location = document.createElement('p')
         location.classList.add(results[i].location)
-        location.textContent = results[i].location
+        //location.textContent = results[i].location
 
         //add desert image
         let image = document.createElement('img')
         image.setAttribute('src', results[i].image)
+
+        image.classList.add('desert-img')
 
         ul.appendChild(listItem)
         listItem.appendChild(title)

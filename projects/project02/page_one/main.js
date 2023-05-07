@@ -673,6 +673,13 @@ let cards = document.querySelectorAll(".card");
 
 function sortingFn(event) {
     if (event.target.classList.contains('filter-btn')) {
+        // select the current active button
+        let activeBtn1 = filterBtns.querySelector('.active')
+        activeBtn1.classList.remove('active')
+  
+        // apply the active class to the target
+        event.target.classList.add('active')
+
         const filterValue = event.target.getAttribute('data-filter');
 
         if(filterValue === 'from smaller to larger'){
@@ -699,18 +706,36 @@ function sortingFn(event) {
             })
             ul.innerHTML = ""
             renderDesertToPage(deserts)
+        } else if (filterValue === 'original order') {
+            deserts.sort(function (c, d){
+                if (c.location < d.location) {
+                    return -1;
+                }
+                if (c.location > d.location) {
+                    return 1;
+                }
+                return 0;
+            })
+            ul.innerHTML = ""
+            renderDesertToPage(deserts)
+            refreshPage
         }
     }
 }
 filterBtns.addEventListener("click", sortingFn);
 
 //FILTERING BY LOCATION OF THE DESERT
-  
+
+function refreshPage(){
+    window.location.reload();
+}
+
 let filterBtns1 = document.querySelector(".filtersdesert");
 let cards1 = document.querySelectorAll(".card");
   
   function filterFn(event) {
     console.log(event.target)
+    
     if(event.target.classList.contains('filter-btn-desert')){
       // select the current active button
       let activeBtn = filterBtns1.querySelector('.active-desert')
@@ -734,3 +759,51 @@ let cards1 = document.querySelectorAll(".card");
     }
   }
   filterBtns1.addEventListener("click", filterFn);
+
+
+
+  //WORKING WITH THE SEARCH BAR
+
+const searchInput = document.querySelector('.input')
+
+searchInput.addEventListener("input", (e) => {
+    //1.declare and assign the value of the event's target to a variable
+    let value = e.target.value
+
+    //2. check if input exists and if input is larger than 0
+    if (value && value.trim().length > 0){
+        //3. redefine 'value' to exclude white space and change input to all lowercase
+        value = value.trim().toLowerCase()
+        //4. return the results only if the value of the search is included in the person's name
+        // we need to write code (a function for filtering through our data to include the search input value)
+
+        //returning only the results of setList if the value of the search is included
+        setList(deserts.filter(location => {
+            return deserts.location.includes(value)
+        }))
+    } else {
+        //5. return nothing
+    }
+})
+
+// creating foundation for the clear button
+const clearButton = document.getElementById('clear')
+
+clearButton.addEventListener("click", () => {
+    //1. write a function that removes any previous results from the page
+})
+
+//showing results on the page
+function setList(results){
+
+    for (const deserts of results){
+        //adding a class to each item of the results
+        listItem.classList.add('result-item')
+
+        const text = document.createTextNode(deserts.location)
+
+        listItem.appendChild(text)
+
+        list.appendChild(listItem)
+    }
+}

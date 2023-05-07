@@ -11,42 +11,39 @@ html, body {
     animation: 3s BackyColor;
 }
 
-.flex-container {
-    display: flex;
-    width: 100%;
-  }
-  
-  .filters,
-  .filtersdesert,
-  .list {
+.filters,
+.filtersdesert,
+.list {
     padding: 20px;
-    border: 1px solid black;
     width: 100%;
   }
 
-  .filter-btn {
-    color: rgb(7, 118, 118);
+.filter-btn {
+    color:rgb(168, 153, 130);
     background-color: aliceblue;
     border-radius: 20px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 35px;
     text-align: center;
     border: none;
   }
 
-  .filter-btn-desert {
-    color: rgb(7, 118, 118);
+.filter-btn.active {
+  background: rgb(249, 231, 198);
+}
+
+.filter-btn-desert {
+    color:rgb(168, 153, 130);
     background-color: aliceblue;
     border-radius: 20px;
     width: 140px;
-    height: 70px;
+    height: 35px;
     text-align: center;
     border: none;
   }
 
   .filter-btn-desert.active-desert {
-    border-color: magenta;
-    background: aqua;
+    background:  rgb(249, 231, 198);
   }
 
   ul {
@@ -73,47 +70,16 @@ html, body {
     margin: 10px;
     width: 400px;
     height: 400px;
-    object-fit: cover;
     overflow: hidden;
+    align-items: center;
+    text-align: center;
   }
 
   img {
-    width: 100%;
-    display: block;
-}
-
-/*div{
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  overflow: hidden;
-}
-img{
-  height:100%;
-  width: 100%;
-  display: block;
-}
-
-NO CHANGE HERE:
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 370px;
+    height: 330px;
+    object-fit: cover;
   }
-
-  li {
-    list-style-type: none;
-    border:  5px solid rgb(228, 226, 201);
-    background-color:rgb(238, 238, 232);
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  img {
-    width: 300px;
-}
-*/
 
   @media (max-width: 160px) {
     ul {
@@ -123,36 +89,6 @@ ul {
     }
   }
   
-  
-  /*trying to flip an image to reveal its location
-  
-  .flipping {
-    transition: transform 1s;
-  	transform-style: preserve-3d;
-  }
-
-  .flipping__face {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-.flipping__face--front {
-    background: red;
-}
-
-.flipping__face--back {
-    background: blue;
-    transform: rotateY( 180deg );
-}
-
-.flipping.is-flipped {
-    transform: rotateY(180deg);
-
-*/
-
-
 
   .left {
     background: rgba(225, 240, 225, 0.236);
@@ -300,4 +236,13 @@ ul {
   100% {
     background-color: rgb(192, 192, 192);
   }
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-bar {
+  padding-left: 50px;
 }
