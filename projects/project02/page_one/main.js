@@ -1,18 +1,18 @@
 console.log('this works')
 
 //size of the desert is measured in miles squared
-const deserts = [
+let deserts = [
     {
         name: "Desert1",
         location: "DeathValley",
         size: 5270,
-        image: 'https://drive.google.com/uc?id=1iS6BFUnReISgARHlENTEYPeHw86XorJs'
+        image: 'https://lh3.google.com/u/0/d/1iS6BFUnReISgARHlENTEYPeHw86XorJs'
     },
     {
         name: "Desert2",
         location: "Atacama",
         size: 40441,
-        image: 'https://drive.google.com/uc?id=1dLzd5MBeB-jpc52FHYPnnuQi9CWc031M'
+        image: 'https://lh3.google.com/u/0/d/1dLzd5MBeB-jpc52FHYPnnuQi9CWc031M'
     },
     {
         name: "Desert3",
@@ -634,6 +634,10 @@ const deserts = [
     },
 ]
 
+deserts.forEach(item => {
+    item.image = item.image.replace("https://drive.google.com/uc?id=", "https://lh3.google.com/u/0/d/");
+});
+
 // Rendering Images from above to page
 const ul = document.querySelector("ul");
 
@@ -643,7 +647,7 @@ function renderDesertToPage(results) {
         //creating the list item
         let listItem = document.createElement('li');
         //add a class to each item of the results
-        listItem.classList.add('card', results[i].location) // 
+        listItem.classList.add('card', results[i].location) //
         //add desert name
         let title = document.createElement('h3')
         title.textContent = results[i].name //
@@ -653,9 +657,9 @@ function renderDesertToPage(results) {
         location.textContent = results[i].location
 
         //add desert size
-        //let area = document.createElement('p')
-        //area.classList.add(results[i].size)
-        //area.textContext = results[i].size
+        let area = document.createElement('p')
+        area.classList.add(results[i].size)
+        area.textContent = "Area: " + results[i].size
 
         //add desert image
         let image = document.createElement('img')
@@ -664,6 +668,7 @@ function renderDesertToPage(results) {
         ul.appendChild(listItem)
         listItem.appendChild(title)
         listItem.appendChild(location)
+        listItem.appendChild(area)
         listItem.appendChild(image)
     }
 }
@@ -681,7 +686,7 @@ function sortingFn(event) {
         // select the current active button
         let activeBtn1 = filterBtns.querySelector('.active')
         activeBtn1.classList.remove('active')
-  
+
         // apply the active class to the target
         event.target.classList.add('active')
 
@@ -737,20 +742,20 @@ function refreshPage(){
 
 let filterBtns1 = document.querySelector(".filtersdesert");
 let cards1 = document.querySelectorAll(".card");
-  
+
   function filterFn(event) {
     console.log(event.target)
-    
+
     if(event.target.classList.contains('filter-btn-desert')){
       // select the current active button
       let activeBtn = filterBtns1.querySelector('.active-desert')
       activeBtn.classList.remove('active-desert')
-  
+
       // apply the active class to the target
       event.target.classList.add('active-desert')
-  
+
       const filterValue1 = event.target.getAttribute('data-filter') // yellow | red
-  
+
       for(let i = 0; i < cards.length; i++){
         if(cards[i].classList.contains(filterValue1) || filterValue1 === 'all'){
           cards[i].classList.remove('hide')
@@ -759,7 +764,7 @@ let cards1 = document.querySelectorAll(".card");
           cards[i].classList.remove('show')
           cards[i].classList.add('hide')
         }
-  
+
       }
     }
   }
