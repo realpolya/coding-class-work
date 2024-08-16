@@ -1,36 +1,36 @@
 console.log('this works')
 
 //size of the desert is measured in miles squared
-const deserts = [
+let deserts = [
     {
         name: "Desert1",
         location: "DeathValley",
         size: 5270,
-        image: 'https://drive.google.com/uc?id=1iS6BFUnReISgARHlENTEYPeHw86XorJs'
+        image: 'https://lh3.google.com/u/0/d/1iS6BFUnReISgARHlENTEYPeHw86XorJs'
     },
     {
         name: "Desert2",
         location: "Atacama",
         size: 40441,
-        image: 'https://drive.google.com/uc?id=1dLzd5MBeB-jpc52FHYPnnuQi9CWc031M'
+        image: 'https://lh3.google.com/u/0/d/1dLzd5MBeB-jpc52FHYPnnuQi9CWc031M'
     },
     {
         name: "Desert3",
         location: "DeathValley",
         size: 5270,
-        image: 'https://drive.google.com/uc?id=1QljuAXmDr_cigiuFlf4JemHLRrBHqOUM'
+        image: 'https://lh3.google.com/u/0/d/1QljuAXmDr_cigiuFlf4JemHLRrBHqOUM'
     },
     {
         name: "Desert4",
         location: "Gobi",
         size: 500000,
-        image: 'https://drive.google.com/uc?id=18vYsRxljS3YkGABIIOJY5EqOeLdzLcvP'
+        image: 'https://lh3.google.com/u/0/d/18vYsRxljS3YkGABIIOJY5EqOeLdzLcvP'
     },
     {
         name: "Desert5",
         location: "Namib",
         size: 31274,
-        image: 'https://drive.google.com/uc?id=1l1zB57qyjtFQwUXNd__vnp76OTGij-KX'
+        image: 'https://lh3.google.com/u/0/d/1l1zB57qyjtFQwUXNd__vnp76OTGij-KX'
     },
     {
         name: "Desert6",
@@ -634,6 +634,10 @@ const deserts = [
     },
 ]
 
+deserts.forEach(item => {
+    item.image = item.image.replace("https://drive.google.com/uc?id=", "https://lh3.google.com/u/0/d/");
+});
+
 // Rendering Images from above to page
 const ul = document.querySelector("ul");
 
@@ -643,7 +647,7 @@ function renderDesertToPage(results) {
         //creating the list item
         let listItem = document.createElement('li');
         //add a class to each item of the results
-        listItem.classList.add('card', results[i].location) // 
+        listItem.classList.add('card', results[i].location) //
         //add desert name
         let title = document.createElement('h3')
         //title.textContent = results[i].name //
